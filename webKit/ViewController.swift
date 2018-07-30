@@ -1,18 +1,29 @@
-//
 //  ViewController.swift
 //  webKit
-//
-//  Created by ginzo on 2018/07/29.
-//  Copyright © 2018年 ginzo. All rights reserved.
-//
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var urlbar: UITextField!
+    @IBOutlet weak var myWebView: WKWebView!
+    
+    @IBAction func goBtn(_ sender: Any) {
+        guard let urltext = urlbar.text ,urlbar.text != "" else{
+            return
+        }
+        print(urltext)
+   // URLにキャスト
+        let domain=URL(string: urltext)!
+        myWebView.load( URLRequest(url:domain) )
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+      
+        
     }
 
     override func didReceiveMemoryWarning() {
