@@ -15,12 +15,12 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
         let aplUrl = "https://www.apple.com/jp/"
         label.text = aplUrl
         let applecom = URL(string: aplUrl)!
         webkit.load(URLRequest(url: applecom))
-        super.viewDidLoad()
       
         
     }
