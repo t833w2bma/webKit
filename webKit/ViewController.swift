@@ -10,10 +10,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UITextField!
     @IBOutlet weak var webkit: WKWebView!
     
-    @IBAction func goBtn(_ sender: Any) {
-  
-    }
-    
+       
     override func viewDidLoad() {
         super.viewDidLoad()
         
